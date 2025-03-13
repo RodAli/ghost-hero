@@ -1,4 +1,4 @@
-import { size } from '../constants';
+import { font, size } from '../constants';
 
 export class Pause extends Phaser.Scene {
     constructor() {
@@ -7,7 +7,8 @@ export class Pause extends Phaser.Scene {
 
     create() {
         this.add.text(size.width / 2, size.height / 3, "Game over!", {
-            font: "100px Arial",
+            fontFamily: font,
+            fontSize: "100px",
             color: "#000000"
         }).setOrigin(0.5, 0.5);
         this.add.text(size.width / 2, (size.height / 3) * 2, "Press Enter key to restart", {
